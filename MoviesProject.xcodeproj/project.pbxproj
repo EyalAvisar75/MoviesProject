@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		6CFB72A626FEDEF300F11F1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB72A526FEDEF300F11F1E /* AppDelegate.m */; };
 		6CFB72A926FEDEF300F11F1E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB72A826FEDEF300F11F1E /* SceneDelegate.m */; };
-		6CFB72AC26FEDEF300F11F1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB72AB26FEDEF300F11F1E /* ViewController.m */; };
 		6CFB72AF26FEDEF300F11F1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CFB72AD26FEDEF300F11F1E /* Main.storyboard */; };
 		6CFB72B126FEDEF900F11F1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CFB72B026FEDEF900F11F1E /* Assets.xcassets */; };
 		6CFB72B426FEDEF900F11F1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CFB72B226FEDEF900F11F1E /* LaunchScreen.storyboard */; };
 		6CFB72B726FEDEF900F11F1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB72B626FEDEF900F11F1E /* main.m */; };
+		6CFB72C226FEE67900F11F1E /* MoviesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB72C126FEE67900F11F1E /* MoviesController.m */; };
+		6CFB72C526FEE8CE00F11F1E /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB72C426FEE8CE00F11F1E /* Movie.m */; };
+		6CFB72C826FEE99E00F11F1E /* MoviesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB72C726FEE99E00F11F1E /* MoviesModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +24,17 @@
 		6CFB72A526FEDEF300F11F1E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6CFB72A726FEDEF300F11F1E /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		6CFB72A826FEDEF300F11F1E /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		6CFB72AA26FEDEF300F11F1E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6CFB72AB26FEDEF300F11F1E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6CFB72AE26FEDEF300F11F1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6CFB72B026FEDEF900F11F1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CFB72B326FEDEF900F11F1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CFB72B526FEDEF900F11F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CFB72B626FEDEF900F11F1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6CFB72C026FEE67900F11F1E /* MoviesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesController.h; sourceTree = "<group>"; };
+		6CFB72C126FEE67900F11F1E /* MoviesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesController.m; sourceTree = "<group>"; };
+		6CFB72C326FEE8CE00F11F1E /* Movie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		6CFB72C426FEE8CE00F11F1E /* Movie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		6CFB72C626FEE99E00F11F1E /* MoviesModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesModel.h; sourceTree = "<group>"; };
+		6CFB72C726FEE99E00F11F1E /* MoviesModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,15 +71,43 @@
 				6CFB72A526FEDEF300F11F1E /* AppDelegate.m */,
 				6CFB72A726FEDEF300F11F1E /* SceneDelegate.h */,
 				6CFB72A826FEDEF300F11F1E /* SceneDelegate.m */,
-				6CFB72AA26FEDEF300F11F1E /* ViewController.h */,
-				6CFB72AB26FEDEF300F11F1E /* ViewController.m */,
-				6CFB72AD26FEDEF300F11F1E /* Main.storyboard */,
+				6CFB72BD26FEE5F400F11F1E /* Controllers */,
+				6CFB72BF26FEE62B00F11F1E /* Models */,
+				6CFB72BE26FEE61C00F11F1E /* Views */,
 				6CFB72B026FEDEF900F11F1E /* Assets.xcassets */,
-				6CFB72B226FEDEF900F11F1E /* LaunchScreen.storyboard */,
 				6CFB72B526FEDEF900F11F1E /* Info.plist */,
 				6CFB72B626FEDEF900F11F1E /* main.m */,
 			);
 			path = MoviesProject;
+			sourceTree = "<group>";
+		};
+		6CFB72BD26FEE5F400F11F1E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6CFB72C026FEE67900F11F1E /* MoviesController.h */,
+				6CFB72C126FEE67900F11F1E /* MoviesController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6CFB72BE26FEE61C00F11F1E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6CFB72AD26FEDEF300F11F1E /* Main.storyboard */,
+				6CFB72B226FEDEF900F11F1E /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6CFB72BF26FEE62B00F11F1E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6CFB72C326FEE8CE00F11F1E /* Movie.h */,
+				6CFB72C426FEE8CE00F11F1E /* Movie.m */,
+				6CFB72C626FEE99E00F11F1E /* MoviesModel.h */,
+				6CFB72C726FEE99E00F11F1E /* MoviesModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CFB72AC26FEDEF300F11F1E /* ViewController.m in Sources */,
+				6CFB72C826FEE99E00F11F1E /* MoviesModel.m in Sources */,
 				6CFB72A626FEDEF300F11F1E /* AppDelegate.m in Sources */,
 				6CFB72B726FEDEF900F11F1E /* main.m in Sources */,
+				6CFB72C526FEE8CE00F11F1E /* Movie.m in Sources */,
+				6CFB72C226FEE67900F11F1E /* MoviesController.m in Sources */,
 				6CFB72A926FEDEF300F11F1E /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

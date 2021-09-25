@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  Movie.m
 //  MoviesProject
 //
 //  Created by Eyal Avissar on 25/09/2021.
 //  Copyright © 2021 Eyal Avissar. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Movie.h"
 
-@interface ViewController : UIViewController
-
+@implementation Movie
 
 @end
-
