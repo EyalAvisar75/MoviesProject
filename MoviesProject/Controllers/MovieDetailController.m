@@ -16,17 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    
+    [self.myMoviesModel getMovieDescriptionById: self.movieId completion:^{
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.movieTextView.text = @"Text goes here.\n The generalPlan: hold movie as a property of this view. Check if files by movie name description, movie name image, exist with file manager. If so, get image - image with urlContents from one and text from anothe. Else, call URLSession with download task, create two files accordingly. Files should probably be temporary, or we should check for date attribute within decided range.";
+        });
+    }];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

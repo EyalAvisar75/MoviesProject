@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MoviesModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MovieDetailController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *movieImageView;
 @property (weak, nonatomic) IBOutlet UITextView *movieTextView;
+
+@property NSString *movieId;
+@property MoviesModel *myMoviesModel;
 
 @end
 

@@ -43,13 +43,11 @@
     
 }
 
-
 //MARK:- TableView DataSource
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
     MovieCell *movieCell = [tableView dequeueReusableCellWithIdentifier:[MovieCell reuseIdentifier]];
-    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
     Movie *movie = [Movie new];
     
@@ -60,13 +58,9 @@
         movie = movies[indexPath.row];
     }
     
-    movieCell.nameLabel.text = movie.name;
-//    cell.textLabel.text = movie.name;
-    movieCell.yearLabel.text = [NSString stringWithFormat:@"%d", movie.movieYear];
-//    cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", movie.movieYear];
-    
+    [self configureCell:movie movieCell:movieCell];
+
     return movieCell;
-//    return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -92,16 +86,14 @@
     [tableView deselectRowAtIndexPath:indexPath animated:true];
     
     Movie *movie = isSearchSuccess ? searchedMovies[indexPath.row] : movies[indexPath.row];
-    
-    NSString *movieId = movie.movieId;
-    
+        
     MovieDetailController *detailController = [self.storyboard instantiateViewControllerWithIdentifier:@"MovieDetail"];
+    
+    detailController.movieId = movie.movieId;
+    detailController.myMoviesModel = myMoviesModel;
     
     [self.navigationController pushViewController:detailController animated:true];
     
-    [myMoviesModel getMovieDescriptionById:movieId completion:^{
-        
-    }];
 }
 
 //MARK:- SearchBarDelegate
@@ -158,12 +150,18 @@
             
             NSNumber *leftMovieYear = [NSNumber numberWithInt:[obj1 movieYear]];
             
-            NSNumber *righttMovieYear = [NSNumber numberWithInt:[obj2 movieYear]];
+            NSNumber *rightMovieYear = [NSNumber numberWithInt:[obj2 movieYear]];
             
-            return [leftMovieYear compare: righttMovieYear];
+            return [leftMovieYear compare: rightMovieYear];
         }];
     }
     [self.moviesTable reloadData];
+}
+
+//MARK:- Helper methods
+- (void)configureCell:(Movie *)movie movieCell:(MovieCell *)movieCell {
+    movieCell.nameLabel.text = movie.name;
+    movieCell.yearLabel.text = [NSString stringWithFormat:@"%d", movie.movieYear];
 }
 
 @end

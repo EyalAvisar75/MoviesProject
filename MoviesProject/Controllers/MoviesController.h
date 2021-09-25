@@ -7,17 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MoviesModel.h"
 #import "Movie.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-@protocol MoviesDelegate <NSObject>
-
-
-
-@end
-
 
 @interface MoviesController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
