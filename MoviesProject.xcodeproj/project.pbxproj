@@ -16,6 +16,7 @@
 		6CFB72C226FEE67900F11F1E /* MoviesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB72C126FEE67900F11F1E /* MoviesController.m */; };
 		6CFB72C526FEE8CE00F11F1E /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB72C426FEE8CE00F11F1E /* Movie.m */; };
 		6CFB72C826FEE99E00F11F1E /* MoviesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB72C726FEE99E00F11F1E /* MoviesModel.m */; };
+		6CFB72D326FF2A5900F11F1E /* MovieDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB72D226FF2A5900F11F1E /* MovieDetailController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		6CFB72C426FEE8CE00F11F1E /* Movie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
 		6CFB72C626FEE99E00F11F1E /* MoviesModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesModel.h; sourceTree = "<group>"; };
 		6CFB72C726FEE99E00F11F1E /* MoviesModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesModel.m; sourceTree = "<group>"; };
+		6CFB72D126FF2A5900F11F1E /* MovieDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieDetailController.h; sourceTree = "<group>"; };
+		6CFB72D226FF2A5900F11F1E /* MovieDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieDetailController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 			children = (
 				6CFB72C026FEE67900F11F1E /* MoviesController.h */,
 				6CFB72C126FEE67900F11F1E /* MoviesController.m */,
+				6CFB72D126FF2A5900F11F1E /* MovieDetailController.h */,
+				6CFB72D226FF2A5900F11F1E /* MovieDetailController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				6CFB72C526FEE8CE00F11F1E /* Movie.m in Sources */,
 				6CFB72C226FEE67900F11F1E /* MoviesController.m in Sources */,
 				6CFB72A926FEDEF300F11F1E /* SceneDelegate.m in Sources */,
+				6CFB72D326FF2A5900F11F1E /* MovieDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

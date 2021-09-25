@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)getAllMovies:  (void (^)(void)) completion;
 
+- (void)getMovieDescriptionById:(NSString *) movieId completion :(void (^)(void))handleCompletion;
+
 @end
 
 NS_ASSUME_NONNULL_END

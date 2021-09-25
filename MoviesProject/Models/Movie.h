@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy) NSString *movieId;
 @property (copy) NSString *name;
 @property (copy) NSString *category;
-@property int year;
+@property int movieYear;
 
 @end
 
