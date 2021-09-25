@@ -7,6 +7,8 @@
 //
 
 #import "MoviesController.h"
+#import "MovieCell.h"
+#import "MovieDetailController.h"
 
 @interface MoviesController ()
 
@@ -27,6 +29,8 @@
     
     self.moviesTable.delegate = self;
     self.moviesTable.dataSource = self;
+    [self.moviesTable registerNib:[UINib nibWithNibName:@"MovieCell" bundle:nil] forCellReuseIdentifier:[MovieCell reuseIdentifier]];
+    
     self.searchBar.delegate = self;
     
     myMoviesModel = [[MoviesModel alloc] init];
@@ -44,8 +48,8 @@
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    MovieCell *movieCell = [tableView dequeueReusableCellWithIdentifier:[MovieCell reuseIdentifier]];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
     Movie *movie = [Movie new];
     
@@ -56,10 +60,13 @@
         movie = movies[indexPath.row];
     }
     
-    cell.textLabel.text = movie.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", movie.movieYear];
+    movieCell.nameLabel.text = movie.name;
+//    cell.textLabel.text = movie.name;
+    movieCell.yearLabel.text = [NSString stringWithFormat:@"%d", movie.movieYear];
+//    cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", movie.movieYear];
     
-    return cell;
+    return movieCell;
+//    return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -82,8 +89,15 @@
 //MARK:- TableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    Movie *movie = movies[indexPath.row];
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    
+    Movie *movie = isSearchSuccess ? searchedMovies[indexPath.row] : movies[indexPath.row];
+    
     NSString *movieId = movie.movieId;
+    
+    MovieDetailController *detailController = [self.storyboard instantiateViewControllerWithIdentifier:@"MovieDetail"];
+    
+    [self.navigationController pushViewController:detailController animated:true];
     
     [myMoviesModel getMovieDescriptionById:movieId completion:^{
         

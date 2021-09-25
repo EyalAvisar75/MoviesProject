@@ -17,6 +17,8 @@
 		6CFB72C526FEE8CE00F11F1E /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB72C426FEE8CE00F11F1E /* Movie.m */; };
 		6CFB72C826FEE99E00F11F1E /* MoviesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB72C726FEE99E00F11F1E /* MoviesModel.m */; };
 		6CFB72D326FF2A5900F11F1E /* MovieDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB72D226FF2A5900F11F1E /* MovieDetailController.m */; };
+		6CFB72D726FF810F00F11F1E /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB72D526FF810F00F11F1E /* MovieCell.m */; };
+		6CFB72D826FF810F00F11F1E /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CFB72D626FF810F00F11F1E /* MovieCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,9 @@
 		6CFB72C726FEE99E00F11F1E /* MoviesModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesModel.m; sourceTree = "<group>"; };
 		6CFB72D126FF2A5900F11F1E /* MovieDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieDetailController.h; sourceTree = "<group>"; };
 		6CFB72D226FF2A5900F11F1E /* MovieDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieDetailController.m; sourceTree = "<group>"; };
+		6CFB72D426FF810F00F11F1E /* MovieCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
+		6CFB72D526FF810F00F11F1E /* MovieCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		6CFB72D626FF810F00F11F1E /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +105,9 @@
 			children = (
 				6CFB72AD26FEDEF300F11F1E /* Main.storyboard */,
 				6CFB72B226FEDEF900F11F1E /* LaunchScreen.storyboard */,
+				6CFB72D426FF810F00F11F1E /* MovieCell.h */,
+				6CFB72D526FF810F00F11F1E /* MovieCell.m */,
+				6CFB72D626FF810F00F11F1E /* MovieCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +182,7 @@
 			files = (
 				6CFB72B426FEDEF900F11F1E /* LaunchScreen.storyboard in Resources */,
 				6CFB72B126FEDEF900F11F1E /* Assets.xcassets in Resources */,
+				6CFB72D826FF810F00F11F1E /* MovieCell.xib in Resources */,
 				6CFB72AF26FEDEF300F11F1E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +200,7 @@
 				6CFB72C526FEE8CE00F11F1E /* Movie.m in Sources */,
 				6CFB72C226FEE67900F11F1E /* MoviesController.m in Sources */,
 				6CFB72A926FEDEF300F11F1E /* SceneDelegate.m in Sources */,
+				6CFB72D726FF810F00F11F1E /* MovieCell.m in Sources */,
 				6CFB72D326FF2A5900F11F1E /* MovieDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
